@@ -10,7 +10,7 @@ export default function App() {
       </h1>
       <MapComp />
       <footer style={{display:'flex',justifyContent:'center'}}>
-        <span style={{color:'white'}}>Desgined by Rohan Hulsure ❤</span>
+        <span style={{color:'white'}}>Designed by Rohan Hulsure ❤</span>
       </footer>
     </div>
   );

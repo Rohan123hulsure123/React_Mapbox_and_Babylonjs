@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, forwardRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Button, Container, Row, Col, Spinner } from 'react-bootstrap';
 
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
@@ -9,7 +9,7 @@ import Cuboid from "./Cuboid";
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZG9uZG9uZG9uMTIzIiwiYSI6ImNsZmI5NmF5OTA4OHozeHBnMGY0ZGV5d28ifQ.mLr_v5Gqv-FHOnV8nk2Opg";
 
-const MapComp = forwardRef(() => {
+const MapComp = (() => {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(79.1014);
