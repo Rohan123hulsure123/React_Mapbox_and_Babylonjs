@@ -9,7 +9,7 @@ export default function App() {
         Mapbox Map to Babylon.js 3D cuboid
       </h1>
       <MapComp />
-      <footer style={{display:'flex',justifyContent:'center'}}>
+      <footer style={{textAlign:'center'}}>
         <span style={{color:'white'}}>Designed by Rohan Hulsure ❤</span>
       </footer>
     </div>

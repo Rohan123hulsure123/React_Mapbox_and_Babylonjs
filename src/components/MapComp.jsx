@@ -59,30 +59,28 @@ const MapComp = (() => {
       // map.current.zoomTo(6, { duration: 9000 });
       map.current.flyTo({
         center: [e.lngLat.lng, e.lngLat.lat],
-        zoom: 8,
+        zoom: (map.current.getZoom()>8)?map.current.getZoom():8,
       });
-
-      
     });
   });
 
   return (
     <Container fluid>
       <Row>
-        <Col md='6' style={{paddingLeft:'2%', paddingRight:'1%', paddingTop:'2%', paddingBottom:'0'}}>
-          {/**Map box */}
+        {/**Map box */}
+        <Col md='6' className="container-parent">
           <div className="sidebar">
             Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
           </div>
           <div ref={mapContainer} className="map-container" />
         </Col>
-        <Col md='6' style={{paddingRight:'2%',paddingLeft:'1%', paddingTop:'2%', paddingBottom:'0'}}>
-            {/* Babylon js cuboid */}
+        {/* Babylon js cuboid */}
+        <Col md='6' className="container-parent" >
             <Cuboid image={image}/> 
         </Col>
       </Row>
-      <div style={{display: 'flex', justifyContent: 'center', marginTop:'1%', marginBottom:'1%'}}>
-          <Button onClick={getImage} md="2" style={{width:'20vw'}} variant="dark">
+      <div style={{display: 'flex', justifyContent: 'center',marginBottom:'1%'}}>
+          <Button onClick={getImage} md="2" className="screenshot-button" variant="dark">
             <Spinner
               as="span"
               animation="grow"

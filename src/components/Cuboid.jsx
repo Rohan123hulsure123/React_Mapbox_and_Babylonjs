@@ -71,7 +71,7 @@ const Cuboid = (props) => {
 
   return (
     <div>
-      <canvas ref={canvasRef} style={{height:'70vh', width:'100%'}} />
+      <canvas ref={canvasRef} className="cuboid-container" />
     </div>
   );
 };

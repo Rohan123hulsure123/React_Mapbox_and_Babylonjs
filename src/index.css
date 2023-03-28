@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -12,10 +13,18 @@ code {
     monospace;
 }
 
+.container-parent {
+  padding: 1%;
+}
+
 .map-container {
   height: 70vh;
   width: 100%;
-  /* margin: auto; */
+}
+
+.cuboid-container {
+  height:70vh;
+  width:100%;
 }
 
 .sidebar {
@@ -43,4 +52,34 @@ code {
   letter-spacing: -0.04em;
 }
 
-/****/
+.screenshot-button {
+  width: 20vh;
+}
+
+/** MEdia query**/
+@media (max-width:768px) {
+  .container-parent {
+    padding: 1% 8% 1% 8%;
+  }
+
+  .map-container {
+    height: 50vh;
+  }
+
+  .cuboid-container {
+    height:50vh;
+  }
+
+  .sidebar {
+    width:min-content;
+  }
+
+  .screenshot-button {
+    width: 50vh;
+    margin: 2%;
+  }  
+
+  .heading {
+    font-size: 50px;
+  }
+}
